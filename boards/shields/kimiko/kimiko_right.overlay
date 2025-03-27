@@ -1,0 +1,31 @@
+// This file was generated from a template. Edit it to match your keyboard.
+// See https://zmk.dev/docs/development/hardware-integration/new-shield for more
+// instructions.
+
+#include "kimiko.dtsi"
+
+&default_transform {
+    // Number of columns on the left half (adjust to match your actual layout)
+    col-offset = <6>;
+};
+
+// Add right-half-specific hardware definitions here
+&nice_nano_v2 {
+    encoder: encoder {
+        compatible = "zmk,encoder";
+        encoders = <&encoder_right>;
+    };
+
+    encoder_right: rotary-encoder {
+        compatible = "rotary-encoder";
+        pin-a = <&pro_micro 26>; // F4
+        pin-b = <&pro_micro 27>; // F5
+        resolution = <4>;
+    };
+
+    rgb_leds: rgb_leds {
+        compatible = "zmk,underglow";
+        chain-length = <30>;
+        data-pin = <&pro_micro 2>; // D3
+    };
+};
