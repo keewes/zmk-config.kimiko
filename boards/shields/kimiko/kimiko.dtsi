@@ -3,8 +3,7 @@
 // instructions.
 
 #include <dt-bindings/zmk/matrix_transform.h>
-
-#include "kimiko-layouts.dtsi"
+#include <kimiko-layouts.dtsi>
 
 / {
     chosen {
