@@ -20,11 +20,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: lily58_left
+    shield: kimiko_left
   - board: nice_nano_v2
-    shield: lily58_right
-  - board: nice_nano_v2
-    shield: sofle_left
-  - board: nice_nano_v2
-    shield: sofle_right
+    shield: kimiko_right
+
     
