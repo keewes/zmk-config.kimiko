@@ -23,4 +23,4 @@ include:
     shield: kimiko_left
   - board: nice_nano_v2
     shield: kimiko_right
-    
+    config: config/kimiko.keymap.dtsi
