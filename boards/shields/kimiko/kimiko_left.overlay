@@ -4,8 +4,23 @@
 
 #include "kimiko.dtsi"
 
-// Left-side specific hardware definitions
-&nice_nano_v2 {
+&pro_micro {
+    matrix: matrix {
+        compatible = "zmk,matrix-pins";
+        diode-direction = "col2row";
+        row-gpios = <&pro_micro 6 GPIO_ACTIVE_HIGH>,  // C6
+                    <&pro_micro 7 GPIO_ACTIVE_HIGH>,  // D7
+                    <&pro_micro 8 GPIO_ACTIVE_HIGH>,  // E6
+                    <&pro_micro 4 GPIO_ACTIVE_HIGH>,  // B4
+                    <&pro_micro 5 GPIO_ACTIVE_HIGH>;  // B5
+        col-gpios = <&pro_micro 29 GPIO_ACTIVE_HIGH>, // F6
+                    <&pro_micro 28 GPIO_ACTIVE_HIGH>, // F7
+                    <&pro_micro 15 GPIO_ACTIVE_HIGH>, // B1
+                    <&pro_micro 14 GPIO_ACTIVE_HIGH>, // B3
+                    <&pro_micro 16 GPIO_ACTIVE_HIGH>, // B2
+                    <&pro_micro 10 GPIO_ACTIVE_HIGH>; // B6
+    };
+
     encoder: encoder {
         compatible = "zmk,encoder";
         encoders = <&encoder_left>;
@@ -30,3 +45,4 @@
         uart = <&pro_micro 1>; // D2
     };
 };
+
